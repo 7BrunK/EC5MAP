@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj1fbl25t7s8i"]
+
+[ext_resource type="Texture2D" uid="uid://0khek0ihclw4" path="res://images/Stairs.png" id="1_gav47"]
+
+[node name="Stairs" type="ColorRect"]
+offset_right = 86.0
+offset_bottom = 38.0
+color = Color(0, 0, 0, 0.380392)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 3.0
+offset_right = 7.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_gav47")
+expand_mode = 2

@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://kklpoohj8uxc"]
+
+[ext_resource type="StyleBox" uid="uid://ded3nqhned7uh" path="res://other/black_button_style.tres" id="1_68wl6"]
+[ext_resource type="Script" path="res://scripts/mid_buttons.gd" id="1_mw816"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5qlg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ubge1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pa458"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ur4f2"]
+
+[node name="Mid_Buttons" type="VBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -310.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("1_mw816")
+
+[node name="4" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m5qlg")
+theme_override_styles/hover = ExtResource("1_68wl6")
+theme_override_styles/pressed = ExtResource("1_68wl6")
+theme_override_styles/normal = ExtResource("1_68wl6")
+toggle_mode = true
+text = "4"
+
+[node name="3" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ubge1")
+theme_override_styles/hover = ExtResource("1_68wl6")
+theme_override_styles/pressed = ExtResource("1_68wl6")
+theme_override_styles/normal = ExtResource("1_68wl6")
+toggle_mode = true
+text = "3"
+
+[node name="2" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pa458")
+theme_override_styles/hover = ExtResource("1_68wl6")
+theme_override_styles/pressed = ExtResource("1_68wl6")
+theme_override_styles/normal = ExtResource("1_68wl6")
+toggle_mode = true
+text = "2"
+
+[node name="1" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ur4f2")
+theme_override_styles/hover = ExtResource("1_68wl6")
+theme_override_styles/pressed = ExtResource("1_68wl6")
+theme_override_styles/normal = ExtResource("1_68wl6")
+toggle_mode = true
+text = "1"
+
+[connection signal="pressed" from="4" to="." method="pressed_4_"]
+[connection signal="pressed" from="3" to="." method="pressed_3_"]
+[connection signal="pressed" from="2" to="." method="pressed_2_"]
+[connection signal="pressed" from="1" to="." method="pressed_1_"]

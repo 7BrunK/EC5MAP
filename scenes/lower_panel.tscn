@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://tjivfm0ji551"]
+
+[ext_resource type="Script" path="res://scripts/lower_panel.gd" id="1_bx1tl"]
+[ext_resource type="FontFile" uid="uid://d4e36qmvmny7q" path="res://other/LugaBook.ttf" id="1_e3nfm"]
+[ext_resource type="Texture2D" uid="uid://bo0e2qqwal5dw" path="res://images/search.png" id="2_d6tr3"]
+[ext_resource type="StyleBox" uid="uid://readlyfkuir3" path="res://other/lower_panel_button.tres" id="2_m3y81"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7iwcf"]
+
+[node name="Lower_panel" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 60
+script = ExtResource("1_bx1tl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Search" type="LineEdit" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_e3nfm")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("2_m3y81")
+theme_override_styles/normal = ExtResource("2_m3y81")
+placeholder_text = "Найти каб. 118"
+max_length = 3
+virtual_keyboard_enabled = false
+virtual_keyboard_type = 2
+caret_blink = true
+
+[node name="Button_search" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7iwcf")
+theme_override_styles/hover = ExtResource("2_m3y81")
+theme_override_styles/pressed = ExtResource("2_m3y81")
+theme_override_styles/normal = ExtResource("2_m3y81")
+icon = ExtResource("2_d6tr3")
+icon_alignment = 1
+expand_icon = true

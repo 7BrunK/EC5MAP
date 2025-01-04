@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmby5gkmdc42"]
+
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_jwip4"]
+[ext_resource type="Texture2D" uid="uid://bvmcf1ksbd28d" path="res://images/BG/gradient_B2W.png" id="2_khony"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="3_doch7"]
+[ext_resource type="PackedScene" uid="uid://bu7j5euupgiom" path="res://scenes/Camera2D.tscn" id="4_jhsj7"]
+[ext_resource type="PackedScene" uid="uid://ldv5nkhmyu3b" path="res://scenes/ui.tscn" id="5_3sxkp"]
+
+[node name="Main_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwip4")
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="BG" type="TextureRect" parent="Background"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.00189)
+texture = ExtResource("2_khony")
+
+[node name="Main" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_doch7")
+
+[node name="Camera2D" parent="Main" instance=ExtResource("4_jhsj7")]
+
+[node name="Floors" type="Node2D" parent="Main"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="HUD" instance=ExtResource("5_3sxkp")]
+offset_top = -4.0
+offset_bottom = 4.0

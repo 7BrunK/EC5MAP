@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rnne1cuu4w1u"]
+
+[ext_resource type="Texture2D" uid="uid://baxteciuxsit6" path="res://images/WC.png" id="1_86sfj"]
+
+[node name="Toilet" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_86sfj")

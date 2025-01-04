@@ -1,0 +1,526 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0p7ft8ty2lo5"]
+
+[ext_resource type="PackedScene" uid="uid://dj1fbl25t7s8i" path="res://scenes/Floors/stairs.tscn" id="1_82t3u"]
+[ext_resource type="FontFile" uid="uid://d4e36qmvmny7q" path="res://other/LugaBook.ttf" id="2_1w8is"]
+[ext_resource type="PackedScene" uid="uid://rnne1cuu4w1u" path="res://scenes/Floors/toilet.tscn" id="2_hwm5d"]
+[ext_resource type="Texture2D" uid="uid://dbps3iivfohuy" path="res://images/floors/Floor2.png" id="2_kmhv0"]
+
+[node name="Floor_2" type="Node2D"]
+
+[node name="Stairs" type="Node2D" parent="."]
+
+[node name="Stairs" parent="Stairs" instance=ExtResource("1_82t3u")]
+offset_left = -236.0
+offset_top = -380.0
+offset_right = -147.0
+offset_bottom = -340.0
+
+[node name="Stairs2" parent="Stairs" instance=ExtResource("1_82t3u")]
+offset_left = 546.0
+offset_top = -380.0
+offset_right = 633.0
+offset_bottom = -340.0
+
+[node name="Stairs3" parent="Stairs" instance=ExtResource("1_82t3u")]
+offset_left = 388.0
+offset_top = 278.0
+offset_right = 482.0
+offset_bottom = 321.0
+
+[node name="Stairs4" parent="Stairs" instance=ExtResource("1_82t3u")]
+offset_left = -65.0
+offset_top = -51.0
+offset_right = 19.0
+offset_bottom = -7.0
+
+[node name="Image_floor" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.475, 2.475)
+texture = ExtResource("2_kmhv0")
+
+[node name="Toilets" type="Node2D" parent="."]
+
+[node name="Toilet2" parent="Toilets" instance=ExtResource("2_hwm5d")]
+offset_left = -47.0
+offset_top = -236.0
+offset_right = 465.0
+offset_bottom = 276.0
+scale = Vector2(0.1, 0.1)
+
+[node name="Classes" type="Node2D" parent="."]
+scale = Vector2(0.7, 0.7)
+
+[node name="118" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 787.0
+offset_top = -390.0
+offset_right = 900.0
+offset_bottom = -135.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1171" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 787.143
+offset_top = -420.0
+offset_right = 900.143
+offset_bottom = -393.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 30
+text = "117/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="119" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 787.0
+offset_top = -123.0
+offset_right = 901.0
+offset_bottom = -37.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.19"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="120" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 786.0
+offset_top = -26.0
+offset_right = 901.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="121" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 786.0
+offset_top = 29.0
+offset_right = 901.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="122" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 784.0
+offset_top = 94.0
+offset_right = 904.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="123" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 786.0
+offset_top = 217.0
+offset_right = 903.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.23"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="124" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 783.0
+offset_top = 513.0
+offset_right = 902.0
+offset_bottom = 744.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="125" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 559.0
+offset_top = 463.0
+offset_right = 686.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="126" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 559.0
+offset_top = 159.0
+offset_right = 688.0
+offset_bottom = 350.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="127" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 557.0
+offset_top = -154.0
+offset_right = 689.0
+offset_bottom = 3.00002
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.27"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="128" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 557.0
+offset_top = -317.0
+offset_right = 688.0
+offset_bottom = -161.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.28"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="129" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 557.0
+offset_top = -420.0
+offset_right = 689.0
+offset_bottom = -324.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.29"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="131" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -87.0
+offset_top = -416.714
+offset_right = 24.0
+offset_bottom = -386.714
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 35
+text = "1.31"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="132" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -331.0
+offset_top = -216.0
+offset_right = -213.0
+offset_bottom = -123.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="133" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -331.0
+offset_top = -419.0
+offset_right = -211.0
+offset_bottom = -326.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="134" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -333.0
+offset_top = -744.0
+offset_right = -208.0
+offset_bottom = -621.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="135" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -201.0
+offset_top = -746.0
+offset_right = -19.0
+offset_bottom = -620.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.35"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="136" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -10.0
+offset_top = -746.0
+offset_right = 176.0
+offset_bottom = -620.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="137" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 183.0
+offset_top = -746.0
+offset_right = 387.0
+offset_bottom = -620.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="138" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 397.0
+offset_top = -746.0
+offset_right = 541.0
+offset_bottom = -620.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.38"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="139" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 551.0
+offset_top = -747.0
+offset_right = 697.0
+offset_bottom = -620.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.39"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="140" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = 707.0
+offset_top = -746.0
+offset_right = 903.0
+offset_bottom = -622.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "1.40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="211" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -87.0
+offset_top = -171.0
+offset_right = 27.0
+offset_bottom = -79.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "2.11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="212" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -87.0
+offset_top = -9.0
+offset_right = 26.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "2.12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="213" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -91.0
+offset_top = 231.0
+offset_right = 25.0
+offset_bottom = 289.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "2.13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="214" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -110.0
+offset_top = 390.0
+offset_right = 26.0
+offset_bottom = 666.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "2.14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="215" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -693.0
+offset_top = 357.0
+offset_right = -206.0
+offset_bottom = 666.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "2.15
+(СПОРТЗАЛ)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="216" type="Label" parent="Classes"]
+texture_filter = 2
+offset_left = -901.0
+offset_top = 666.0
+offset_right = -591.0
+offset_bottom = 866.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "2.16
+(СПОРТЗАЛ)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Other_rooms" type="Node2D" parent="."]
+scale = Vector2(0.7, 0.7)
+
+[node name="Covorking" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = 270.0
+offset_top = -537.0
+offset_right = 553.0
+offset_bottom = -427.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "КОВОРКИНГ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="M_room" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = -331.0
+offset_top = 73.0
+offset_right = -144.0
+offset_bottom = 194.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 35
+text = "РАЗДЕ-КА
+МУЖ."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="W_room" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = -331.428
+offset_top = 271.429
+offset_right = -144.428
+offset_bottom = 392.429
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 35
+text = "РАЗДЕ-КА
+ЖЕН."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Forum_zone" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = -900.0
+offset_top = 86.0
+offset_right = -421.0
+offset_bottom = 273.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "ФОРУМ ЗОНА"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slub_room" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = -207.0
+offset_top = 474.0
+offset_right = -115.0
+offset_bottom = 667.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "сл.п."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slub_room2" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = -89.0
+offset_top = 290.0
+offset_right = 24.0
+offset_bottom = 386.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "сл.п."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slub_room3" type="Label" parent="Other_rooms"]
+texture_filter = 2
+offset_left = 559.0
+offset_top = 9.0
+offset_right = 686.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 40
+text = "сл.п."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Streets" type="Node2D" parent="."]
+
+[node name="ASH_street" type="Label" parent="Streets"]
+modulate = Color(1, 1, 1, 0.627451)
+texture_filter = 2
+offset_left = 635.0
+offset_top = 524.0
+offset_right = 1685.0
+offset_bottom = 654.0
+rotation = -1.5708
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 50
+text = "Ул. Александра Шмакова"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SG_street" type="Label" parent="Streets"]
+modulate = Color(1, 1, 1, 0.627451)
+texture_filter = 2
+offset_left = -631.0
+offset_top = 524.0
+offset_right = 635.0
+offset_bottom = 654.0
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_1w8is")
+theme_override_font_sizes/font_size = 50
+text = "Ул. Скульптора Головницкого"
+horizontal_alignment = 1
+vertical_alignment = 1

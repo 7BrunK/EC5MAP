@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=3 uid="uid://bibaesjwwo4xe"]
+
+[ext_resource type="FontFile" uid="uid://d4e36qmvmny7q" path="res://other/LugaBook.ttf" id="1_j8p0n"]
+[ext_resource type="StyleBox" uid="uid://orcqj41a7lth" path="res://other/panel_down.tres" id="1_rw6vw"]
+[ext_resource type="Script" path="res://scripts/settings_menu.gd" id="1_yy475"]
+[ext_resource type="StyleBox" uid="uid://dm6i3w8730ntb" path="res://other/settings_menu.tres" id="4_lwb7i"]
+[ext_resource type="Texture2D" uid="uid://0khek0ihclw4" path="res://images/Stairs.png" id="5_ncwvy"]
+[ext_resource type="Texture2D" uid="uid://baxteciuxsit6" path="res://images/WC.png" id="6_ovnu6"]
+
+[sub_resource type="Theme" id="Theme_rtard"]
+default_font = ExtResource("1_j8p0n")
+default_font_size = 40
+
+[node name="Settings_Menu" type="PopupPanel"]
+initial_position = 2
+size = Vector2i(864, 1379)
+visible = true
+min_size = Vector2i(540, 960)
+max_size = Vector2i(3456, 3840)
+theme_override_styles/panel = ExtResource("1_rw6vw")
+script = ExtResource("1_yy475")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 864.0
+offset_bottom = 1379.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(864, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_j8p0n")
+theme_override_font_sizes/font_size = 60
+text = "Доп. информация"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BG_Version" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/BG_Version"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_j8p0n")
+theme_override_font_sizes/font_size = 40
+text = "Версия фонового изображения:"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/MarginContainer/VBoxContainer/BG_Version"]
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = SubResource("Theme_rtard")
+theme_override_fonts/font = ExtResource("1_j8p0n")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = ExtResource("4_lwb7i")
+theme_override_styles/disabled_mirrored = ExtResource("4_lwb7i")
+theme_override_styles/disabled = ExtResource("4_lwb7i")
+theme_override_styles/hover_mirrored = ExtResource("4_lwb7i")
+theme_override_styles/hover = ExtResource("4_lwb7i")
+theme_override_styles/pressed_mirrored = ExtResource("4_lwb7i")
+theme_override_styles/pressed = ExtResource("4_lwb7i")
+theme_override_styles/normal_mirrored = ExtResource("4_lwb7i")
+theme_override_styles/normal = ExtResource("4_lwb7i")
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "1"
+popup/item_1/text = "2"
+popup/item_1/id = 1
+
+[node name="Spring" type="Control" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Info_label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Данная карта не содержит младший
+корпус ОЦ №5, далее приведены
+условные обозначения на карте:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_ncwvy")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "лестница"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_ovnu6")
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "туалет"
+
+[connection signal="item_selected" from="VBoxContainer/MarginContainer/VBoxContainer/BG_Version/OptionButton" to="." method="_on_option_button_BG_Version_selected"]
