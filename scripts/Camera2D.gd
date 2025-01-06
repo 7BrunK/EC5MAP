@@ -17,7 +17,7 @@ var zoom0
 var zoom_factor
 
 func _process(delta: float) -> void:
-	print(offset)
+	pass#print(offset)
 
 func _input(event):
 	if event is InputEventScreenTouch:

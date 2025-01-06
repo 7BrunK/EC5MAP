@@ -22,17 +22,17 @@ func search_class_function(_data = null): # _data нужна только как
 			TEXT_LINE.clear()
 			TEXT_LINE.placeholder_text = "Каб. № %s выделен" %current_class_out_text
 		else: #обработка TEXT != REAL CLASS
-			show_error()
+			blink_text_line()
 			TEXT_LINE.clear()
 			TEXT_LINE.placeholder_text = "Каб. № %s не найден!" %current_class_out_text
 	elif TEXT_LINE.text != "": #обработка TEXT != value
-		show_error()
+		blink_text_line()
 		TEXT_LINE.clear()
 		TEXT_LINE.placeholder_text = "Недопустимые символы!"
 
-func show_error():
+func blink_text_line(blick_color : Color = Color.RED):
 	var tween = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
-	tween.tween_property(TEXT_LINE, "modulate", Color.RED, 0.5)
+	tween.tween_property(TEXT_LINE, "modulate", blick_color, 0.5)
 	tween.tween_property(TEXT_LINE, "modulate", Color.WHITE, 0.2)
 
 func text_line_focus_entered():

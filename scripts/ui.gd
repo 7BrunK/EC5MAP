@@ -27,5 +27,5 @@ func keyboard_controller(button_name):
 			LOWER_PANEL.TEXT_LINE.text = LOWER_PANEL.TEXT_LINE.text.substr(0, LOWER_PANEL.TEXT_LINE.text.length() - 1)
 		"HIDE":
 			KEYBOARD.hide()
-		_: #else
+		_: #else в поле добавляются цифры
 			LOWER_PANEL.TEXT_LINE.text += button_name
