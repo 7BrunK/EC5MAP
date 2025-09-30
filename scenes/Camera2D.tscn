@@ -1,9 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://bu7j5euupgiom"]
 
-[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_imkqp"]
+[ext_resource type="Script" uid="uid://cgykjcd2fkqkg" path="res://scripts/Camera2D.gd" id="2_imkqp"]
 
 [node name="Camera2D" type="Camera2D"]
 script = ExtResource("2_imkqp")
 tween_speed = 0.5
 can_pan = true
 can_zoom = true
+zoom_min = 0.5
+zoom_max = 5.0

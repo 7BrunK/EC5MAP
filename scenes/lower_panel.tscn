@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://tjivfm0ji551"]
 
-[ext_resource type="Script" path="res://scripts/lower_panel.gd" id="1_bx1tl"]
+[ext_resource type="Script" uid="uid://dh1kn7jhppooq" path="res://scripts/lower_panel.gd" id="1_bx1tl"]
 [ext_resource type="FontFile" uid="uid://d4e36qmvmny7q" path="res://other/LugaBook.ttf" id="1_e3nfm"]
 [ext_resource type="Texture2D" uid="uid://bo0e2qqwal5dw" path="res://images/search.png" id="2_d6tr3"]
 [ext_resource type="StyleBox" uid="uid://readlyfkuir3" path="res://other/lower_panel_button.tres" id="2_m3y81"]

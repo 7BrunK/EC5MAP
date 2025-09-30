@@ -1,14 +1,20 @@
 extends Camera2D
 """ Узел камеры """
 
+@export_group("Speed")
 @export var zoom_speed: float = 0.1
 @export var pan_speed: float = 1.0
 @export var rotation_speed: float = 1.0
 @export var tween_speed: float = 0.4
 
+@export_group("Can Transforms")
 @export var can_pan: bool
 @export var can_zoom: bool
 @export var can_rotate: bool
+
+@export_group("Zoom limit")
+@export_range(0, 20, 0.1) var zoom_min: float
+@export_range(0, 20, 0.1) var zoom_max: float
 
 var touch_points: Dictionary = {}
 var distance0
@@ -50,22 +56,24 @@ func handle_drag(event: InputEventScreenDrag):
 		limit_zoom(zoom)
 
 func limit_zoom(new_zoom):
-	if new_zoom.x < 0.5:
-		zoom.x = 0.5
-	if new_zoom.y < 0.5:
-		zoom.y = 0.5
-	if new_zoom.x > 5:
-		zoom.x = 5
-	if new_zoom.y > 5:
-		zoom.y = 5
+	if new_zoom.x < zoom_min:
+		zoom.x = zoom_min
+	if new_zoom.y < zoom_min:
+		zoom.y = zoom_min
+	if new_zoom.x > zoom_max:
+		zoom.x = zoom_max
+	if new_zoom.y > zoom_max:
+		zoom.y = zoom_max
 
 func move2node(target_node: Node, speed_ratio: float = 1.0):
-	var tween = create_tween().set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT) # Vector2(target_node.get_global_position() - CAMERA.get_target_position() + Vector2(target_node.size.x/2, target_node.size.y/2))
-	if target_node.has_method("get_size"):
-		tween.tween_property(self, "offset", target_node.global_position + target_node.size/2, tween_speed / speed_ratio)
-	else:
-		tween.tween_property(self, "offset", target_node.global_position, tween_speed / speed_ratio)
-	tween.tween_property(self, "zoom", Vector2(2.7,2.7), 2 * tween_speed / speed_ratio)
+	var target_position: Vector2 = target_node.global_position
+	var rot = target_node.rotation
+	var shift = Vector2(target_node.size.x / 2 * cos(rot), target_node.size.x / 2 * sin(rot)) + Vector2(target_node.size.y / 2 * -1 * sin(rot), target_node.size.y / 2 * cos(rot))
+	target_position += shift
+	
+	var tween = create_tween().set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "offset", target_position, tween_speed / speed_ratio)
+	tween.tween_property(self, "zoom", Vector2(zoom_max/2, zoom_max/2), 2 * tween_speed / speed_ratio)
 
 #func get_angle(p1, p2):
 	#var delta = p2 - p1

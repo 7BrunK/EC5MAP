@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://kklpoohj8uxc"]
 
 [ext_resource type="StyleBox" uid="uid://ded3nqhned7uh" path="res://other/black_button_style.tres" id="1_68wl6"]
-[ext_resource type="Script" path="res://scripts/mid_buttons.gd" id="1_mw816"]
+[ext_resource type="Script" uid="uid://i2d7nr68x8v2" path="res://scripts/mid_buttons.gd" id="1_mw816"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5qlg"]
 

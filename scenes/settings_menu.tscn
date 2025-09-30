@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://d4e36qmvmny7q" path="res://other/LugaBook.ttf" id="1_j8p0n"]
 [ext_resource type="StyleBox" uid="uid://orcqj41a7lth" path="res://other/panel_down.tres" id="1_rw6vw"]
-[ext_resource type="Script" path="res://scripts/settings_menu.gd" id="1_yy475"]
+[ext_resource type="Script" uid="uid://g1r1wvlweg0m" path="res://scripts/settings_menu.gd" id="1_yy475"]
 [ext_resource type="StyleBox" uid="uid://dm6i3w8730ntb" path="res://other/settings_menu.tres" id="4_lwb7i"]
 [ext_resource type="Texture2D" uid="uid://0khek0ihclw4" path="res://images/Stairs.png" id="5_ncwvy"]
 [ext_resource type="Texture2D" uid="uid://baxteciuxsit6" path="res://images/WC.png" id="6_ovnu6"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccmy6uftqbmau"]
 
 [ext_resource type="StyleBox" uid="uid://orcqj41a7lth" path="res://other/panel_down.tres" id="1_8414e"]
-[ext_resource type="Script" path="res://scripts/keyboard.gd" id="2_xovcl"]
+[ext_resource type="Script" uid="uid://d0cwpm606v6vp" path="res://scripts/keyboard.gd" id="2_xovcl"]
 [ext_resource type="StyleBox" uid="uid://ded3nqhned7uh" path="res://other/black_button_style.tres" id="3_68aq5"]
 [ext_resource type="ButtonGroup" uid="uid://cgbpcimsndxnd" path="res://other/button_group_nums.tres" id="4_if1o5"]
 

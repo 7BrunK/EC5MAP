@@ -378,9 +378,9 @@ vertical_alignment = 1
 
 [node name="215" type="Label" parent="Classes"]
 texture_filter = 2
-offset_left = -693.0
-offset_top = 357.0
-offset_right = -206.0
+offset_left = -694.0
+offset_top = 356.0
+offset_right = -216.0
 offset_bottom = 666.0
 theme_override_fonts/font = ExtResource("2_1w8is")
 theme_override_font_sizes/font_size = 40
@@ -391,10 +391,10 @@ vertical_alignment = 1
 
 [node name="216" type="Label" parent="Classes"]
 texture_filter = 2
-offset_left = -901.0
+offset_left = -903.0
 offset_top = 666.0
-offset_right = -591.0
-offset_bottom = 866.0
+offset_right = -592.0
+offset_bottom = 867.0
 rotation = -1.5708
 theme_override_fonts/font = ExtResource("2_1w8is")
 theme_override_font_sizes/font_size = 40

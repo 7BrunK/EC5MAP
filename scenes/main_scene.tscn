@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bmby5gkmdc42"]
 
-[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_jwip4"]
+[ext_resource type="Script" uid="uid://g1dlkengvmgc" path="res://scripts/main_scene.gd" id="1_jwip4"]
 [ext_resource type="Texture2D" uid="uid://bvmcf1ksbd28d" path="res://images/BG/gradient_B2W.png" id="2_khony"]
-[ext_resource type="Script" path="res://scripts/main.gd" id="3_doch7"]
+[ext_resource type="Script" uid="uid://i328aes4eg62" path="res://scripts/main.gd" id="3_doch7"]
 [ext_resource type="PackedScene" uid="uid://bu7j5euupgiom" path="res://scenes/Camera2D.tscn" id="4_jhsj7"]
 [ext_resource type="PackedScene" uid="uid://ldv5nkhmyu3b" path="res://scenes/ui.tscn" id="5_3sxkp"]
 
